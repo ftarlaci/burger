@@ -14,7 +14,7 @@ router.get('/', function(req,res) {
 
 
 router.get('/burgers', function(req,res) {
-	cat.selectAll(function(data){	
+	burger.selectAll(function(data){	
 		console.log()
 		res.render('index', {burgers: data});
 	});
@@ -37,7 +37,7 @@ router.put('/burgers/update/:id', function(req,res) {
 
 	console.log('condition', condition);
 
-	cat.updateOne({'devoured' : 1} condition, function(data){
+	burger.updateOne({'devoured' : 1}, condition, function(data){
 		res.redirect('/burgers');
 	});
 	

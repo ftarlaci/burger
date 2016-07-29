@@ -1,1 +1,1 @@
-# burger
+This is an app that uses MySQL, Express, HAndlebars and ORM.
