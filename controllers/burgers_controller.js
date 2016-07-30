@@ -15,7 +15,7 @@ router.get('/', function(req,res) {
 
 router.get('/burgers', function(req,res) {
 	burger.selectAll(function(data){	
-		console.log()
+		console.log();
 		res.render('index', {burgers: data});
 	});
 
