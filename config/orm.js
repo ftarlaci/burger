@@ -1,5 +1,5 @@
 /*
-Here is the O.R.M. where you write functions that takes inputs and conditions and turn them into database commands like SQL. I am using the example from last Saturday's class.
+Here is the O.R.M. to write functions that take inputs and conditions and turn them into database commands like SQL. I am using the example from last Saturday's class.
 */
 var connection = require('../config/connection.js');
 
@@ -44,7 +44,7 @@ var orm = {
       queryString = queryString + printQuestionMarks(vals.length);
       queryString = queryString + ') ';
 
-      console.log(queryString)
+      console.log(queryString);
 
       connection.query(queryString, vals, function(err, result) {
         if (err) throw err;
