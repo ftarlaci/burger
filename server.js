@@ -11,7 +11,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 
-
+var exphbs = require('express-handlebars');
 
 //Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static('public'));
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 // override with POST having ?_method=DELETE
 
 app.use(methodOverride('_method'));
-var exphbs = require('express-handlebars');
+//var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
